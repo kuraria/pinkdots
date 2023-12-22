@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+# Set decoration geometry
+berryc border_width       0
+berryc inner_border_width 5
+berryc title_height       30
+berryc edge_gap           25 25 25 25
+
+# Set decoration colors
+berryc focus_color         000000
+berryc unfocus_color       000000
+berryc inner_focus_color   2d2424
+berryc inner_unfocus_color 2d2424
+berryc text_focus_color    e0cfc6
+berryc text_unfocus_color  e0cfc6
+
+# Other options
+berryc smart_place "true"
+berryc draw_text   "true"
+berryc edge_lock   "true"
+berryc set_font    "CaskaydiaCoveNerdFont-9"
+
+# Startup
+sxhkd -c $HOME/.config/berry/sxhkdrc &
+nitrogen --restore &
+picom &
